@@ -27,7 +27,7 @@ def get_flow():
     )
 
 def authenticate():
-    query_params = st.query_params  # ✅ Ini versi baru (Streamlit >= 1.30)
+    query_params = st.query_params  
     if "code" in query_params:
         flow = get_flow()
         flow.fetch_token(code=query_params["code"][0])
